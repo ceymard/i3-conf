@@ -43,6 +43,7 @@ exec_always --no-startup-id $HOME/.config/i3/polybar.sh
 # background !
 exec_always --no-startup-id feh --bg-fill --randomize $HOME/.config/i3/*.jpg
 exec_always --no-startup-id $HOME/.config/i3/compton.sh
+exec_always --no-startup-id $HOME/.config/i3/node/nth.js
 
 bindsym $mod+o move workspace to output right
 bindsym $mod+grave focus output right
@@ -155,7 +156,9 @@ bindsym $mod+F6 workspace $ws6
 bindsym $mod+F7 workspace $ws7
 bindsym $mod+F8 workspace $ws8
 bindsym $mod+F9 workspace $ws9
-bindsym $mod+F0 workspace $ws10
+bindsym $mod+F10 workspace $ws10
+bindsym $mod+F11 workspace $ws11
+bindsym $mod+F12 workspace $ws12
 
 # move focused container to workspace
 bindsym $mod+Shift+F1 move container to workspace $ws1
@@ -167,7 +170,9 @@ bindsym $mod+Shift+F6 move container to workspace $ws6
 bindsym $mod+Shift+F7 move container to workspace $ws7
 bindsym $mod+Shift+F8 move container to workspace $ws8
 bindsym $mod+Shift+F9 move container to workspace $ws9
-bindsym $mod+Shift+F0 move container to workspace $ws10
+bindsym $mod+Shift+F10 move container to workspace $ws10
+bindsym $mod+Shift+F11 move container to workspace $ws11
+bindsym $mod+Shift+F12 move container to workspace $ws12
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
