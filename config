@@ -56,6 +56,10 @@ bindsym XF86AudioPrev $spotify.Previous
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+# increase screen brightness
+bindsym XF86MonBrightnessUp exec light -A 5
+# decrease screen brightness
+bindsym XF86MonBrightnessDown exec light -U 5
 
 
 # Before i3 v4.8, we used to recommend this one as the default:

@@ -1,2 +1,4 @@
 apt install i3-gaps # needs ppa
 apt install polybar rofi feh
+
+git clone https://github.com/haikarainen/light
