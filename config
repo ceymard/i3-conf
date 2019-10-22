@@ -49,10 +49,14 @@ bindsym $mod+o move workspace to output right
 bindsym $mod+grave focus output right
 bindsym $mod+l exec i3lock -c 1c1c1b
 
-set $spotify exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player
+set $spotify exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player
 bindsym XF86AudioPlay $spotify.PlayPause
 bindsym XF86AudioNext $spotify.Next
 bindsym XF86AudioPrev $spotify.Previous
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
