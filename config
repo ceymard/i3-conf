@@ -49,6 +49,11 @@ bindsym $mod+o move workspace to output right
 bindsym $mod+grave focus output right
 bindsym $mod+l exec i3lock -c 1c1c1b
 
+set $spotify exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player
+bindsym XF86AudioPlay $spotify.PlayPause
+bindsym XF86AudioNext $spotify.Next
+bindsym XF86AudioPrev $spotify.Previous
+
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
