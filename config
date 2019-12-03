@@ -46,6 +46,10 @@ exec_always --no-startup-id $HOME/.config/i3/compton.sh
 exec_always --no-startup-id $HOME/.config/i3/node/nth.js
 # exec_always --no-startup-id redshift-gtk -t 6500:3600
 
+# pour avoir les paramètres de gnome
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+
+
 bindsym $mod+o move workspace to output right
 bindsym $mod+grave focus output right
 # bindsym $mod+l exec i3lock -c 1c1c1b
